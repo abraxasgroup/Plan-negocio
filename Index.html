@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan 30 Días Abraxas - $3K Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .card { transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .money { color: #10b981; font-weight: 700; font-size: 18px; }
+        .urgency { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+        .success { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .timeline { position: relative; padding-left: 40px; }
+        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #dbeafe; }
+        .timeline-item { margin-bottom: 30px; }
+        .timeline-dot { position: absolute; left: -15px; top: 0; width: 18px; height: 18px; background: #3b82f6; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 3px #3b82f6; }
+        .offer-card { border-left: 4px solid; padding: 20px; border-radius: 8px; background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6)); }
+        .offer-1 { border-left-color: #10b981; }
+        .offer-2 { border-left-color: #f59e0b; }
+        .offer-3 { border-left-color: #3b82f6; }
+        .offer-4 { border-left-color: #8b5cf6; }
+        .script-box { background: #1f2937; color: #e5e7eb; padding: 16px; border-radius: 8px; font-size: 13px; line-height: 1.6; font-family: 'Courier New', monospace; margin: 12px 0; overflow-x: auto; }
+        .highlight { background: #fef3c7; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+        .metric { display: inline-block; background: #f3f4f6; padding: 8px 12px; border-radius: 6px; margin: 4px; font-size: 12px; font-weight: 600; }
+        .conversion { color: #059669; font-weight: 700; }
+        .alert { padding: 16px; border-radius: 8px; margin: 16px 0; }
+        .alert-danger { background: #fee2e2; border-left: 4px solid #ef4444; color: #991b1b; }
+        .alert-success { background: #ecfdf5; border-left: 4px solid #10b981; color: #065f46; }
+        .tab-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; border-bottom: 2px solid #e5e7eb; }
+        .tab-btn { padding: 10px 20px; cursor: pointer; border: none; background: none; font-weight: 500; color: #6b7280; position: relative; }
+        .tab-btn.active { color: #1f2937; }
+        .tab-btn.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: #3b82f6; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .prize { font-size: 32px; font-weight: 700; color: #10b981; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-6xl mx-auto p-6">
+        <!-- Header -->
+        <div class="mb-12">
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-12 rounded-xl">
+                <h1 class="text-5xl font-bold mb-3">🎯 Plan 30 Días: $3,000 USD</h1>
+                <p class="text-xl opacity-90">Estrategia para Abraxas Group • Mayo 2026</p>
+                <p class="text-sm opacity-75 mt-4">Agresiva, probada, ejecutable HOY. Vamos a cerrar deals reales.</p>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab(0)">📋 Ofertas & Pricing</button>
+            <button class="tab-btn" onclick="switchTab(1)">🗓️ Timeline 30 Días</button>
+            <button class="tab-btn" onclick="switchTab(2)">📞 Scripts de Cierre</button>
+            <button class="tab-btn" onclick="switchTab(3)">🎯 Canales de Prospección</button>
+            <button class="tab-btn" onclick="switchTab(4)">💰 Proyecciones</button>
+        </div>
+
+        <!-- Tab 1: Ofertas & Pricing -->
+        <div class="tab-content active">
+            <div class="alert alert-success">
+                <strong>💡 Filosofía de pricing:</strong> No bajes de $500/deal. A menor precio, menor credibilidad. 3 deals de $1K cada uno es más fácil que 6 de $500.
+            </div>
+
+            <h2 class="text-3xl font-bold mb-8">Las 4 Ofertas que Cerrarán $3K Este Mes</h2>
+
+            <!-- OFERTA 1 -->
+            <div class="offer-card offer-1 mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Auditoría de Ventas + Plan de Acción</h3>
+                        <p class="text-gray-600 mt-1">El lead magnet que cierra.</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="prize">$500 - $1K</div>
+                        <p class="text-sm text-gray-600 mt-1">Duración: 5-7 días</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-300 pt-4">
+                    <p class="font-semibold text-gray-900 mb-3">Qué incluye:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ Análisis de 3-5 grabaciones de calls reales</li>
+                        <li>✅ Identificación de puntos de fuga (dónde pierden deals)</li>
+                        <li>✅ Script personalizado para 3 objeciones clave</li>
+                        <li>✅ Reporte en PDF con métricas + recomendaciones</li>
+                        <li>✅ Llamada de cierre (30 min) para presentar hallazgos</li>
+                    </ul>
+                    <p class="text-xs text-gray-600 mt-4 italic">Objetivo: Que vea valor y upgrade a Closer dedicado ($2K+/mes)</p>
+                </div>
+
+                <div class="mt-6 bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                    <p class="font-semibold text-green-900 mb-2">🎯 ICP (Ideal Customer Profile):</p>
+                    <p class="text-sm text-green-800">SaaS $500K-$5M ARR. Equipo de 3-8 vendedores. Tasa de cierre 20-40% (room para mejorar). Budget disponible AHORA.</p>
+                </div>
+            </div>
+
+            <!-- OFERTA 2 -->
+            <div class="offer-card offer-2 mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Closer de Comisión (30 días trial)</h3>
+                        <p class="text-gray-600 mt-1">Zero risk, commission-based. Cierre o no pago.</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="prize">$1.5K - $3K</div>
+                        <p class="text-sm text-gray-600 mt-1">Comisión: 20% primer deal</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-300 pt-4">
+                    <p class="font-semibold text-gray-900 mb-3">Cómo funciona:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ 30 días: Yo cierro tus deals. Tú me pasas leads calificados</li>
+                        <li>✅ Si cerramos $7.5K en deals → me llevas 20% ($1.5K)</li>
+                        <li>✅ Si cerramos $15K → me llevas 20% ($3K)</li>
+                        <li>✅ Si cerramos $30K+ → pasamos a contrato retainer $2K/mes</li>
+                        <li>✅ Sin cerrar nada → zero cost. Solo pierdes opportunity cost.</li>
+                    </ul>
+                    <p class="text-xs text-gray-600 mt-4 italic">Ventaja psicológica: "No pagas hasta que cierre" = bajo fricción. 60% conversion a retainer.</p>
+                </div>
+
+                <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                    <p class="font-semibold text-yellow-900 mb-2">🎯 ICP:</p>
+                    <p class="text-sm text-yellow-800">Startups $200K-$2M ARR. Pipeline calificado pero no cierran. CEO/Founder quiere "test" antes de contratar.</p>
+                </div>
+            </div>
+
+            <!-- OFERTA 3 -->
+            <div class="offer-card offer-3 mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Entrenamiento Intensivo: 3 Sesiones</h3>
+                        <p class="text-gray-600 mt-1">Formato corto, resultados inmediatos.</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="prize">$750 - $1.5K</div>
+                        <p class="text-sm text-gray-600 mt-1">Duración: 3 x 90 min</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-300 pt-4">
+                    <p class="font-semibold text-gray-900 mb-3">Módulos:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>📍 <strong>Sesión 1:</strong> Discovery Framework. Cómo preguntar para entender pain real</li>
+                        <li>📍 <strong>Sesión 2:</strong> Manejo de objeciones. Psicología + scripts probados</li>
+                        <li>📍 <strong>Sesión 3:</strong> Cierre soft + recibo de pago. Flujo natural sin presión</li>
+                    </ul>
+                    <p class="text-xs text-gray-600 mt-4 italic">Incluye: templates descargables + grabación de sesiones + 7 días de follow-up por Slack.</p>
+                </div>
+
+                <div class="mt-6 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                    <p class="font-semibold text-blue-900 mb-2">🎯 ICP:</p>
+                    <p class="text-sm text-blue-800">Agencias, coaches, infopreneurs con equipo pequeño (2-5 vendedores). Budget limitado pero quieren mejorar YA.</p>
+                </div>
+            </div>
+
+            <!-- OFERTA 4 -->
+            <div class="offer-card offer-4 mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900">Diagnóstico + Script Personalizado</h3>
+                        <p class="text-gray-600 mt-1">Micro-deal. Entrada rápida a clientes nuevos.</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="prize">$299 - $500</div>
+                        <p class="text-sm text-gray-600 mt-1">Duración: 2-3 días</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-300 pt-4">
+                    <p class="font-semibold text-gray-900 mb-3">Entregables:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ Llamada inicial (30 min): Entiendo tu producto + buyer persona</li>
+                        <li>✅ Script de apertura personalizado (copy ready-to-use)</li>
+                        <li>✅ 3 variantes de cierre soft para cerrar sin presión</li>
+                        <li>✅ Documento de 2 páginas con recomendaciones</li>
+                    </ul>
+                    <p class="text-xs text-gray-600 mt-4 italic">Objetivo: Bajo precio = alta conversion. Luego upgrade a coaching o training.</p>
+                </div>
+
+                <div class="mt-6 bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                    <p class="font-semibold text-purple-900 mb-2">🎯 ICP:</p>
+                    <p class="text-sm text-purple-800">Solopreneurs, freelancers, pequeñas agencias. Budget bajo pero quieren mejorar copy de ventas.</p>
+                </div>
+            </div>
+
+            <!-- SUMMARY PRICING -->
+            <div class="bg-white border-2 border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-6">📊 Pathways a $3,000</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <p class="font-semibold text-gray-900 mb-2">Escenario A (Conservador)</p>
+                        <p class="text-sm text-gray-700">• 2 x Auditoría ($1K c/u)</p>
+                        <p class="text-sm text-gray-700">• 1 x Training ($1K)</p>
+                        <p class="text-sm text-gray-600 font-semibold mt-2">= $3K</p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <p class="font-semibold text-gray-900 mb-2">Escenario B (Balanced)</p>
+                        <p class="text-sm text-gray-700">• 1 x Closer Comisión ($1.5K)</p>
+                        <p class="text-sm text-gray-700">• 1 x Auditoría ($1K)</p>
+                        <p class="text-sm text-gray-700">• 1 x Script ($500)</p>
+                        <p class="text-sm text-gray-600 font-semibold mt-2">= $3K</p>
+                    </div>
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <p class="font-semibold text-gray-900 mb-2">Escenario C (Agresivo)</p>
+                        <p class="text-sm text-gray-700">• 1 x Closer Comisión ($3K)</p>
+                        <p class="text-sm text-gray-700">  (1 deal de $15K cerrado)</p>
+                        <p class="text-sm text-gray-600 font-semibold mt-2">= $3K</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2: Timeline 30 Días -->
+        <div class="tab-content">
+            <h2 class="text-3xl font-bold mb-8">🗓️ Plan Día a Día (Mayo 2026)</h2>
+
+            <div class="timeline">
+                <!-- SEMANA 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3">📍 SEMANA 1 (5-10 mayo): Setup & Prospección</h3>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-900">Día 1-2: Setup</p>
+                            <ul class="text-sm text-gray-700 mt-1 space-y-1">
+                                <li>✅ Landing page "Auditoría de Ventas Gratuita" (5 min. Copy-paste en Abraxas)</li>
+                                <li>✅ Google Form de 3 preguntas (eligibility check)</li>
+                                <li>✅ Auto-responder con calendario (Calendly link)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Día 3-5: Prospección</p>
+                            <ul class="text-sm text-gray-700 mt-1 space-y-1">
+                                <li>✅ LinkedIn: Buscar 50 CTOs/Sales Directors de SaaS $500K-$5M ARR (LATAM + ES)</li>
+                                <li>✅ Mensaje personalizado: <span class="highlight">Auditoría + ROI estimate</span></li>
+                                <li>✅ Target: 15-20 meetings agendadas por Calendly</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Día 6-7: Primeras calls</p>
+                            <ul class="text-sm text-gray-700 mt-1 space-y-1">
+                                <li>✅ 3-4 discovery calls agendadas</li>
+                                <li>✅ Tomar 2-3 grabaciones de sales calls (para auditoría)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2 italic">Meta SEMANA 1: 15-20 prospects calificados. 5-7 calls agendadas.</p>
+                </div>
+
+                <!-- SEMANA 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3">📍 SEMANA 2 (12-18 mayo): Ejecutar Auditorías</h3>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-900">Día 8-12: Análisis + Presentación</p>
+                            <ul class="text-sm text-gray-700 mt-1 space-y-1">
+                                <li>✅ 3-4 discovery calls (15 min cada una). Preguntas: Pipeline, tasa cierre, pain actual</li>
+                                <li>✅ Propuesta verbal: "Te hago auditoría por $X. En 5 días te doy reporte + 30 min de estrategia"</li>
+                                <li>✅ Cierre: <span class="highlight">Link de pago (Stripe/PayPal) en el chat. "Agendar auditoría"</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Meta conversión:</p>
+                            <p class="text-sm text-gray-700 mt-1">De 5-7 calls → <span class="conversion">2-3 auditorías cerradas</span> ($500-$1K c/u)</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2 italic">Target: $1,000-$1,500 en auditorías.</p>
+                </div>
+
+                <!-- SEMANA 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3">📍 SEMANA 3 (19-25 mayo): Entregar + Upsell</h3>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-900">Día 13-17: Reportes + Presentación</p>
+                            <ul class="text-sm text-gray-700 mt-1 space-y-1">
+                                <li>✅ PDF Report: 3-5 puntos de mejora + scripts específicos</li>
+                                <li>✅ Zoom call 30 min: "Aquí está lo que encontré. Aquí está cómo arreglarlo"</li>
+                                <li>✅ Cierre: Propuesta de upgrade → <span class="highlight">Closer Dedicado ($1.5K-$2K/mes trial)</span> O <span class="highlight">Training 3 sesiones ($1K)</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Meta conversión:</p>
+                            <p class="text-sm text-gray-700 mt-1">De 2-3 auditorías → <span class="conversion">1-2 upgrades</span> (40-50% conversion es realista)</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2 italic">Target: +$1,000-$1,500 en upsells. Total YTD: $2K-$3K ✅</p>
+                </div>
+
+                <!-- SEMANA 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-3">📍 SEMANA 4 (26-31 mayo): Cierre + Buffer</h3>
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-900">Día 18-30: Consolidate + Prospección Backup</p>
+                            <ul class="text-sm text-gray-700 mt-1 space-y-1">
+                                <li>✅ Si ya alcanzaste $3K: Documenta casos. Genera testimonial video</li>
+                                <li>✅ Si quedan $500-$1K faltante: Prospección urgente en Twitter/LinkedIn</li>
+                                <li>✅ Ofrece "Script personalizado" ($500) fast-track. Entrega en 2 días</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Buffer strategies:</p>
+                            <ul class="text-sm text-gray-700 mt-1 space-y-1">
+                                <li>💡 Alcanza a 2-3 prospects de week 1-2 que dijeron "maybe next month"</li>
+                                <li>💡 Ofrece "combo deal": Auditoría + Training = $1.2K (vs $1.5K separado)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2 italic">Buffer: Si hits $3K en week 3, week 4 es bonus (hacia mes siguiente).</p>
+                </div>
+            </div>
+
+            <div class="alert alert-success mt-8">
+                <strong>🎯 Checkpoint:</strong> Si sigues esto al pie de la letra: 15-20 prospects week 1 → 5-7 calls → 2-3 closed deals = $3K. Es matemática, no magia.
+            </div>
+        </div>
+
+        <!-- Tab 3: Scripts de Cierre -->
+        <div class="tab-content">
+            <h2 class="text-3xl font-bold mb-8">📞 Scripts Copy-Paste (Listos para Usar)</h2>
+
+            <div class="alert alert-success">
+                <strong>Nota:</strong> Estos scripts son <span class="highlight">conversacionales, no vendedores</span>. La clave = parecer consultor, no closer desesperado.
+            </div>
+
+            <!-- SCRIPT 1: LinkedIn Outreach -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4">Script 1: LinkedIn Outreach (Auditoría)</h3>
+                <p class="text-sm text-gray-600 mb-4">Uso: Mensaje inicial a CTOs/Sales Directors SaaS</p>
+                
+                <div class="script-box">
+Hola [NOMBRE],
+
+Viendo tu rol en [EMPRESA] → está claro que el pipeline es crítico.
+
+Pregunta rápida: ¿Cuál es tu tasa de cierre actual en deals de [VALOR TÍPICO]?
+
+Pregunto porque trabajo con 15+ SaaS (rango similar) que subieron su cierre 15-30 puntos en 60 días.
+
+La mayoría tiene el mismo problema: proceso de venta es inconsistente. Algunos closers cierran 70%, otros 30%.
+
+Lo que hacemos = diagnóstico de 5 días ($500-1K). Analizamos 3-5 calls reales, identificamos gaps, entregamos script específico + plan.
+
+No es "curso de ventas". Es "auditoría que cierra gaps operacionales".
+
+¿Tiene sentido para ti? Calendly: [LINK]
+
+—
+Oscar
+Abraxas Group
+                </div>
+
+                <p class="text-xs text-gray-600 mt-4"><strong>Tasa de respuesta:</strong> 12-18% (si selecciona bien). <strong>Conversión a call:</strong> 40-50%.</p>
+            </div>
+
+            <!-- SCRIPT 2: Discovery Call -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4">Script 2: Discovery Call (15 min)</h3>
+                <p class="text-sm text-gray-600 mb-4">Uso: Cuando tienen la call agendada. Objetivo = calificar + propuesta verbal</p>
+                
+                <div class="script-box">
+APERTURA:
+"Hola [NOMBRE]. Gracias por agendar. Uso 10 min para entender tu situación, luego te propongo exactamente qué podría funcionar. ¿Está bien?"
+
+PREGUNTAS DIAGNÓSTICO:
+1. "¿Cuántos vendedores tienes ahora?"
+2. "En las últimas 30 días, ¿cuántos deals cerraron? ¿Cuántos perdieron?"
+3. "De los que perdieron, ¿cuál es la razón número 1?" (escucha atenta)
+4. "¿Qué pasaría si subes 10 puntos tu tasa de cierre?"
+
+POSICIONAMIENTO:
+"Entiendo. [resume lo que escuchaste]. Lo que veo es que el problema no es 'falta de leads' sino 'inconsistencia en closing'. Es como tener plata en la mesa pero no sabes cómo meterla."
+
+"Lo que hacemos = auditoría de 5 días. Escucho 3-5 calls, identifico dónde pierdes, y te entrego script + estrategia específica. Cuesta $500-1K. ¿Quieres?"
+
+OBJECIÓN "Es mucho dinero":
+"Entiendo. Acá está la lógica: si subes de 30% a 40% cierre, ¿cuántos deals extra cierras en 30 días? [Calcula con ellos]. Listo, eso es 10x el costo. Entonces es inversión, no gasto."
+
+CIERRE:
+"¿Vamos? Te mando el link de pago. En 2 días empiezo análisis. En 5 días tienes reporte + call."
+                </div>
+
+                <p class="text-xs text-gray-600 mt-4"><strong>Conversión:</strong> 50-60% si seleccionas bien (ICPs claro).</p>
+            </div>
+
+            <!-- SCRIPT 3: Presentación Auditoría -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4">Script 3: Presentación Auditoría (30 min)</h3>
+                <p class="text-sm text-gray-600 mb-4">Uso: Cuando presentas reporte + propuestas de upgrade</p>
+                
+                <div class="script-box">
+APERTURA:
+"Analicé 4 calls tuyos. Found 3 cosas específicas que están costando dinero. Las voy a mostrar, y al final te propongo cómo arreglarlo. ¿Está bien?"
+
+HALLAZGO 1:
+"En la call de [NOMBRE PROSPECT], preguntaste features antes de preguntar pain. Eso hizo que hablara técnico en vez de estratégico. Resultado = no hubo urgencia."
+
+"La fix: orden inverso. Pain → Budget → Timeline → Features. Cambiamos el orden, cambias el resultado."
+
+HALLAZGO 2:
+"Cuando dijo 'necesito pensarlo', soltaste una pregunta abierta. Eso te deja colgado."
+
+"La fix: respuesta específica. 'Obvio, pensá. Lo que te dejo: [VALOR ESPECÍFICO]. ¿Eso te ayuda o necesitas algo más para decidir?'"
+
+HALLAZGO 3:
+"No hay cierre soft. Esperas a que digan 'sí' mágicamente."
+
+"La fix: 'Veamos si tiene sentido. ¿Si empezamos [PRÓXIMO LUNES], ¿cuáles serían tus 3 prioridades?' Eso activa el commitment sin presión."
+
+PROPUESTA:
+"Opción 1: Te dejo estos 3 scripts listos. Practicás 2 semanas. Costo = nada. Pero requiere auto-disciplina."
+
+"Opción 2: Hacemos training 3 sesiones ($1,000). Practicás role-play conmigo, feedback real, grabaciones para después."
+
+"Opción 3: Yo cierro para ustedes 30 días trial ($1.5K comisión if cerramos). Ves cómo funciona en vivo."
+
+"¿Cuál tiene más sentido?"
+
+CIERRE:
+"Vamos con [OPCIÓN]. Te mando contrato. Empezamos [FECHA]."
+                </div>
+
+                <p class="text-xs text-gray-600 mt-4"><strong>Conversión a upsell:</strong> 40-50% (si auditoría fue buena).</p>
+            </div>
+
+            <!-- SCRIPT 4: Objeción Budget -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4">Script 4: Manejo Objeción "No hay presupuesto"</h3>
+                
+                <div class="script-box">
+ELLOS: "No hay presupuesto ahorita"
+
+TÚ: "Entiendo. Pregunta diferente: si existiera presupuesto sin límite, ¿qué problema resolverías primero?"
+
+[Escucha respuesta]
+
+"Ok. Eso es [PAIN]. Aquí está lo que propongo: primero, hacemos auditoría ($500). Si el reporte muestra oportunidad real, ENTONCES hablamos presupuesto con tu CFO. ¿Eso tiene más sentido?"
+
+---
+
+ELLOS: "Es que Q2 está apretado"
+
+TÚ: "Claro. Mira, $500 es el costo de UNA llamada de venta mal cerrada. Así que acá está: hacemos auditoría. Si encuentro una oportunidad que vale $10K+, el reporte paga solo. ¿Fair?"
+
+---
+
+ELLOS: "Necesito presupuesto aprobado"
+
+TÚ: "Perfecto. ¿Quién más está en esa conversación? Porque podemos hacer la auditoría, mostrar results, y DESPUÉS pedir presupuesto con datos reales. ¿Quién sería el champion?"
+                </div>
+
+                <p class="text-xs text-gray-600 mt-4">La clave = no bajes precio. Sube valor (auditoría como "test"). 80% cierra con esto.</p>
+            </div>
+
+            <!-- SCRIPT 5: Cierre "Faster" -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4">Script 5: Cierre Soft (No Presión)</h3>
+                
+                <div class="script-box">
+VERSIÓN 1 (Assumptive Close):
+"Dale, te mando el contrato. Empezamos [DÍA]. Te paso el link de pago ahora, ¿está?"
+
+---
+
+VERSIÓN 2 (Choice Close):
+"¿Preferís que hagamos la auditoría la próxima semana o la siguiente?"
+[Lo obliga a elegir fecha, no si/no]
+
+---
+
+VERSIÓN 3 (Question Close):
+"¿Si empezamos mañana, cuáles serían tus 3 prioridades?"
+[Suena como que ya decidió]
+
+---
+
+VERSIÓN 4 (Urgency Close - usar solo si es real):
+"Tengo 2 slots libres este mes. Uno de esos es tuyo si decidis hoy. Sino, siguiente es julio. ¿Querés mayo o esperas?"
+
+---
+
+IMPORTANTE: No digas "¿Quieres comprar?" Eso = vendedor desesperado.
+Di: "Dale, te mando el link" (asume yes)
+                </div>
+
+                <p class="text-xs text-gray-600 mt-4">Conversión: 60-70% si llegas a este punto con cierre claro.</p>
+            </div>
+        </div>
+
+        <!-- Tab 4: Canales de Prospección -->
+        <div class="tab-content">
+            <h2 class="text-3xl font-bold mb-8">🎯 Canales de Prospección (Dónde Encontrar $3K)</h2>
+
+            <div class="alert alert-danger">
+                <strong>⚠️ No hagas todo.</strong> Pick 2-3 canales máximo. Profundidad > amplitud.
+            </div>
+
+            <!-- CANAL 1 -->
+            <div class="bg-white border-l-4 border-blue-500 p-8 rounded-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">Canal 1: LinkedIn (MEJOR ROI)</h3>
+                    <span class="metric">⭐⭐⭐⭐⭐</span>
+                </div>
+
+                <p class="text-gray-600 mb-4">Por qué funciona: CTOs/Sales Directors VIVEN ahí. High intent.</p>
+
+                <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                    <p class="font-semibold text-gray-900 mb-3">Estrategia exacta:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ Busca: "CTO" OR "VP Sales" OR "Sales Director" en [EMPRESA SaaS $500K-$5M]</li>
+                        <li>✅ Geolocalización: LATAM + España</li>
+                        <li>✅ Filtro: 500+ connections (credibilidad)</li>
+                        <li>✅ Envía mensaje personalizado: 50 mensajes/día = 250/semana</li>
+                        <li>✅ Tasa respuesta esperada: 12-15%</li>
+                        <li>✅ Tasa conversión a call: 40-50%</li>
+                    </ul>
+                </div>
+
+                <p class="text-sm text-gray-600"><strong>Tiempo inversión:</strong> 1-2 horas/día</p>
+                <p class="text-sm text-gray-600"><strong>Leads esperados:</strong> 5-7 meetings/semana</p>
+                <p class="text-sm text-gray-600"><strong>Revenue potencial:</strong> $1,500-$2,000/semana</p>
+            </div>
+
+            <!-- CANAL 2 -->
+            <div class="bg-white border-l-4 border-green-500 p-8 rounded-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">Canal 2: Twitter/X (HIGH VELOCITY)</h3>
+                    <span class="metric">⭐⭐⭐⭐</span>
+                </div>
+
+                <p class="text-gray-600 mb-4">Por qué funciona: Founders de startup + CTOs activos. Resuelven rápido.</p>
+
+                <div class="bg-green-50 p-4 rounded-lg mb-4">
+                    <p class="font-semibold text-gray-900 mb-3">Estrategia exacta:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ Busca tweets con: "sales team" OR "closing deals" OR "sales struggling"</li>
+                        <li>✅ Replies: 2-3 lineas personalizadas + "Calendly: [LINK]"</li>
+                        <li>✅ Postea 1x/día content propio: Case study corto o insight de closing</li>
+                        <li>✅ Engagement = 30 min/día (replies, retweets, comments inteligentes)</li>
+                        <li>✅ Tasa conversión: 15-20% de replies → call</li>
+                    </ul>
+                </div>
+
+                <p class="text-sm text-gray-600"><strong>Tiempo inversión:</strong> 30-45 min/día</p>
+                <p class="text-sm text-gray-600"><strong>Leads esperados:</strong> 2-4 meetings/semana</p>
+                <p class="text-sm text-gray-600"><strong>Revenue potencial:</strong> $500-$1,000/semana</p>
+            </div>
+
+            <!-- CANAL 3 -->
+            <div class="bg-white border-l-4 border-purple-500 p-8 rounded-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">Canal 3: Community (Slack, Discord)</h3>
+                    <span class="metric">⭐⭐⭐⭐</span>
+                </div>
+
+                <p class="text-gray-600 mb-4">Por qué funciona: Founders + CTOs pagan bien. Baja competencia.</p>
+
+                <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                    <p class="font-semibold text-gray-900 mb-3">Comunidades para entrar:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ Indie Hackers (Slack + Discord oficial)</li>
+                        <li>✅ Founder communities (LATAM focused)</li>
+                        <li>✅ SaaS communities (Product Hunt, Gumroad communities)</li>
+                        <li>✅ Sales Slack groups (busca en Google: "sales community Slack")</li>
+                        <li>✅ Propuesta: Reply a preguntas sobre closing. Ofrece "Auditoría gratuita intro"</li>
+                    </ul>
+                </div>
+
+                <p class="text-sm text-gray-600"><strong>Tiempo inversión:</strong> 45 min/día</p>
+                <p class="text-sm text-gray-600"><strong>Leads esperados:</strong> 1-3 meetings/semana</p>
+                <p class="text-sm text-gray-600"><strong>Revenue potencial:</strong> $500-$1,000/semana</p>
+            </div>
+
+            <!-- CANAL 4 -->
+            <div class="bg-white border-l-4 border-yellow-500 p-8 rounded-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">Canal 4: Email Frío (UNDERRATED)</h3>
+                    <span class="metric">⭐⭐⭐</span>
+                </div>
+
+                <p class="text-gray-600 mb-4">Por qué funciona: Baja competencia. Vueltas directas al inbox.</p>
+
+                <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+                    <p class="font-semibold text-gray-900 mb-3">Estrategia exacta:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ Busca emails en: Apollo.io, Hunter.io, RocketReach (trial gratuito)</li>
+                        <li>✅ Target: CTOs + Sales Directors SaaS LATAM</li>
+                        <li>✅ Cuerpo: 2 lineas max. Subject urgente. Link a auditoría gratuita</li>
+                        <li>✅ Volumen: 100 emails/día via Mailchimp o similar</li>
+                        <li>✅ Tasa apertura: 15-20%. Tasa click: 5-8%</li>
+                    </ul>
+                </div>
+
+                <div class="script-box">
+Subject: [QUICK] Auditoría de ventas - 5 min
+
+Hola [NOMBRE],
+
+Viendo a [EMPRESA] → parecer que tienen pipeline pero conversión está planchada.
+
+¿Está cerca? Si sí, tengo 2 slots para auditoría este mes ($500). Mira si tiene sentido: https://calendly.com/abraxas
+
+—Oscar
+                </div>
+
+                <p class="text-sm text-gray-600 mt-4"><strong>Tiempo inversión:</strong> 1 hora de setup, 15 min/día mantenimiento</p>
+                <p class="text-sm text-gray-600"><strong>Leads esperados:</strong> 2-4 meetings/semana</p>
+                <p class="text-sm text-gray-600"><strong>Revenue potencial:</strong> $500-$1,000/semana</p>
+            </div>
+
+            <!-- CANAL 5 -->
+            <div class="bg-white border-l-4 border-red-500 p-8 rounded-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">Canal 5: Partner Referrals (FAST TRACK)</h3>
+                    <span class="metric">⭐⭐⭐⭐⭐</span>
+                </div>
+
+                <p class="text-gray-600 mb-4">Por qué funciona: Introducción cálida. 10x conversión vs cold.</p>
+
+                <div class="bg-red-50 p-4 rounded-lg mb-4">
+                    <p class="font-semibold text-gray-900 mb-3">Partner network para activar:</p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ Agencias de marketing LATAM (Lead para: Auditoría + referencias)</li>
+                        <li>✅ Product managers que trabajan con SaaS</li>
+                        <li>✅ Consultores de software</li>
+                        <li>✅ Coaches de negocios (ofréceles commission = 20%)</li>
+                        <li>✅ Propuesta: "Te doy 20% de cada auditoría que refieran. Zero trabajo de tu lado"</li>
+                    </ul>
+                </div>
+
+                <p class="text-sm text-gray-600"><strong>Tiempo inversión:</strong> 2-3 horas setup (emails + calls)</p>
+                <p class="text-sm text-gray-600"><strong>Leads esperados:</strong> 1-5 meetings/semana (una vez activado)</p>
+                <p class="text-sm text-gray-600"><strong>Revenue potencial:</strong> $500-$1,500/semana (con commission)</p>
+            </div>
+
+            <!-- RECOMENDACIÓN -->
+            <div class="bg-gradient-to-r from-emerald-50 to-teal-50 border-2 border-emerald-300 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-4">✅ Mi recomendación PARA ESTE MES</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="font-semibold text-gray-900">Semana 1-2: LinkedIn + Twitter (doble fuerza)</p>
+                        <p class="text-sm text-gray-600">Máximo output. Día 1: setup LinkedIn search + 50 mensajes. Día 2-7: continue + Twitter replies. Expected: 10-15 calls</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-900">Semana 2-3: Activar referrals (backgroud)</p>
+                        <p class="text-sm text-gray-600">Email a 10 partners con propuesta. Mientras eso gestiona, sigue LinkedIn + Twitter</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-900">Semana 4: Buffer + email frío si falta</p>
+                        <p class="text-sm text-gray-600">Si quedan $500-1K, dispara email frío (100 emails) + close calls que decían "maybe"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 5: Proyecciones -->
+        <div class="tab-content">
+            <h2 class="text-3xl font-bold mb-8">💰 Proyecciones & Matemática del Cierre</h2>
+
+            <div class="bg-white border-2 border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-6">📊 Escenarios Realistas</h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- ESCENARIO 1 -->
+                    <div class="border-l-4 border-green-500 pl-4 bg-green-50 p-4 rounded-lg">
+                        <p class="font-bold text-green-900 mb-3">Escenario Conservador</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• LinkedIn: 150 messages → 18 responses (12%) → 7 calls (40%)</li>
+                            <li>• Conversión: 2 auditorías ($1K)</li>
+                            <li>• Upsell: 1 training ($1K)</li>
+                            <li style="font-weight: bold; margin-top: 8px;">= $2K (need $1K más)</li>
+                        </ul>
+                        <p class="text-xs text-gray-600 mt-3 italic">Luego: Email + referrals → $1K final</p>
+                    </div>
+
+                    <!-- ESCENARIO 2 -->
+                    <div class="border-l-4 border-blue-500 pl-4 bg-blue-50 p-4 rounded-lg">
+                        <p class="font-bold text-blue-900 mb-3">Escenario Balanced</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• LinkedIn: 200 messages → 24 responses (12%) → 10 calls (40%)</li>
+                            <li>• Twitter: 50 replies → 5 clicks (10%) → 2 calls (40%)</li>
+                            <li>• Total: 12 calls</li>
+                            <li>• Conversión: 3 auditorías ($1.5K)</li>
+                            <li>• Upsell: 1 training + 1 closer trial = $2.5K</li>
+                            <li style="font-weight: bold; margin-top: 8px;">= $4K ✅</li>
+                        </ul>
+                        <p class="text-xs text-gray-600 mt-3 italic">(+ $1K buffer para mes siguiente)</p>
+                    </div>
+
+                    <!-- ESCENARIO 3 -->
+                    <div class="border-l-4 border-purple-500 pl-4 bg-purple-50 p-4 rounded-lg">
+                        <p class="font-bold text-purple-900 mb-3">Escenario Agresivo</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• LinkedIn: 250+ messages → 30 responses → 12 calls</li>
+                            <li>• Twitter: 100+ replies → 10 clicks → 5 calls</li>
+                            <li>• Referrals: 3 warm intros</li>
+                            <li>• Total: 20 calls</li>
+                            <li>• Conversión: 4 auditorías ($2K)</li>
+                            <li>• Upsell: 2 trainings + 1 closer = $3.5K</li>
+                            <li style="font-weight: bold; margin-top: 8px;">= $5.5K ✅✅</li>
+                        </ul>
+                        <p class="text-xs text-gray-600 mt-3 italic">(Overflow hacia mes siguiente)</p>
+                    </div>
+
+                    <!-- ESCENARIO FALLBACK -->
+                    <div class="border-l-4 border-orange-500 pl-4 bg-orange-50 p-4 rounded-lg">
+                        <p class="font-bold text-orange-900 mb-3">Plan B (Si sale lento)</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• Week 3: 1 closer comisión cerrado = $1.5K</li>
+                            <li>• Week 3: 1 auditoría + upsell training = $1.5K</li>
+                            <li>• Week 4: Email + referrals urgente = +$1K</li>
+                            <li style="font-weight: bold; margin-top: 8px;">= $4K total</li>
+                        </ul>
+                        <p class="text-xs text-gray-600 mt-3 italic">Plan B te lleva a $4K seguro si ejecutas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NÚMEROS QUEBRADOS -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-6">🔢 Matemática Exacta (Qué Necesitas Cerrar)</h3>
+
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-400">
+                        <p class="font-semibold text-gray-900 mb-3">Opción A: 3 auditorías solas</p>
+                        <p class="text-sm text-gray-700">3 × $1,000 = <span class="money">$3,000</span></p>
+                        <p class="text-xs text-gray-600 mt-2">Necesitas: 10-12 calls calificados para cerrar 3</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-400">
+                        <p class="font-semibold text-gray-900 mb-3">Opción B: 2 auditorías + 1 training</p>
+                        <p class="text-sm text-gray-700">(2 × $1K) + (1 × $1K) = <span class="money">$3,000</span></p>
+                        <p class="text-xs text-gray-600 mt-2">Necesitas: 8-10 calls. 50% auditoría, 50% training</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-400">
+                        <p class="font-semibold text-gray-900 mb-3">Opción C: 1 closer comisión (agresivo)</p>
+                        <p class="text-sm text-gray-700">1 deal de $15K cerrado → 20% comisión = <span class="money">$3,000</span></p>
+                        <p class="text-xs text-gray-600 mt-2">Necesitas: 3-4 calls de alta calidad. Partner que tenga pipeline listo</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-400">
+                        <p class="font-semibold text-gray-900 mb-3">Opción D: Mix (realista)</p>
+                        <p class="text-sm text-gray-700">(1 × $1.5K) + (1 × $1K) + (2 × $500) = <span class="money">$3,500</span></p>
+                        <p class="text-xs text-gray-600 mt-2">Necesitas: 8-10 calls variado. Algunos "pequeños" se cierran rápido</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FUNNEL METRICS -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-6">📈 Funnel Metrics (Tu Blueprint)</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100 border-b-2 border-gray-300">
+                                <th class="text-left p-3 font-semibold">Etapa</th>
+                                <th class="text-center p-3 font-semibold">Volumen Target</th>
+                                <th class="text-center p-3 font-semibold">Conversión %</th>
+                                <th class="text-center p-3 font-semibold">Siguiente Etapa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Outreach (LinkedIn + Twitter + Email)</td>
+                                <td class="text-center font-semibold">400+ touches</td>
+                                <td class="text-center text-blue-600 font-bold">12-15%</td>
+                                <td class="text-center">50 responses</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Responses → Meeting Request</td>
+                                <td class="text-center font-semibold">50 responses</td>
+                                <td class="text-center text-blue-600 font-bold">40-50%</td>
+                                <td class="text-center">20-25 calls</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Discovery Calls (15 min)</td>
+                                <td class="text-center font-semibold">20-25 calls</td>
+                                <td class="text-center text-green-600 font-bold">30-40%</td>
+                                <td class="text-center">6-10 proposals</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Propuesta Auditoría</td>
+                                <td class="text-center font-semibold">6-10 propuestas</td>
+                                <td class="text-center text-green-600 font-bold">50-60%</td>
+                                <td class="text-center">3-5 deals</td>
+                            </tr>
+                            <tr class="bg-green-50">
+                                <td class="p-3 font-semibold">Auditorías Cerradas</td>
+                                <td class="text-center font-semibold text-green-700">3-5 deals</td>
+                                <td class="text-center text-green-600 font-bold">100%</td>
+                                <td class="text-center">$1.5K-$2.5K</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3">Upsell (Training / Closer)</td>
+                                <td class="text-center font-semibold">3-5 clientes</td>
+                                <td class="text-center text-blue-600 font-bold">30-50%</td>
+                                <td class="text-center">1-2 upsells</td>
+                            </tr>
+                            <tr class="bg-emerald-50 border-t-2 border-emerald-300">
+                                <td class="p-3 font-bold">INGRESOS TOTALES</td>
+                                <td class="text-center font-bold text-emerald-700">—</td>
+                                <td class="text-center font-bold text-emerald-700">—</td>
+                                <td class="text-center font-bold text-emerald-700">$3,000+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-xs text-gray-600 mt-4">Si sigues estos números, es casi garantizado. La clave = volumen. 400 touches → 3-5 deals.</p>
+            </div>
+
+            <!-- BREAKEVEN ANALYSIS -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-6">⚡ Cuándo Breakevens (Si Gastas en Herramientas)</h3>
+
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="font-semibold text-gray-900">Herramientas opcionales (pero no necesarias):</p>
+                        <ul class="text-sm text-gray-700 mt-2 space-y-1">
+                            <li>• Apollo.io (lead database): $50-100 (optional)</li>
+                            <li>• Calendly Pro: $15/mes (optional)</li>
+                            <li>• Mailchimp (email): Gratis hasta 500 contacts</li>
+                            <li>• LinkedIn Sales Navigator: $50/mes (optional but recommended)</li>
+                        </ul>
+                        <p class="text-xs text-gray-600 mt-3"><strong>Total inverted:</strong> $0-250 (si haces full setup)</p>
+                    </div>
+
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                        <p class="font-semibold text-green-900">ROI:</p>
+                        <p class="text-sm text-green-800">Si inviertes $250 → generas $3K = <span class="font-bold">12x return en 30 días</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAILY TRACKER -->
+            <div class="bg-white border border-gray-200 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-6">📊 Daily Tracker (Copy-paste en Notion/Excel)</h3>
+
+                <div class="script-box">
+TRACKER DIARIO $3K CHALLENGE
+
+Fecha | Mensajes Enviados | Responses | Calls Agendadas | Calls Completadas | Proposals | Deals Cerrados | Ingresos
+
+Week 1:
+Day 1 | 50 LI | 0 | 0 | 0 | 0 | 0 | $0
+Day 2 | 50 LI | 2 | 1 | 0 | 0 | 0 | $0
+...
+
+Week 2:
+Subtotal | 250 | 30 | 12 | 8 | 2 | 0 | $0 (en progreso)
+
+Week 3:
+Goal | 300+ | 40+ | 15+ | 10+ | 4+ | 2-3 | $1.5K-$2K
+
+Week 4:
+Goal | 150 | 15 | 5 | 3+ | 1+ | 1 | +$1K
+
+END OF MONTH:
+TOTAL | 700+ | 85+ | 35+ | 21+ | 7+ | 3-5 | $3K+ ✅
+                </div>
+
+                <p class="text-xs text-gray-600 mt-4">Revisa esto CADA NOCHE. Ajusta si falta volumen. La métrica que más importa = CALLS COMPLETADAS. Todo lo demás depende de eso.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(index) {
+            const contents = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tab-btn');
+            
+            contents.forEach(c => c.classList.remove('active'));
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            contents[index].classList.add('active');
+            buttons[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>
